@@ -30,3 +30,19 @@ Route::get('/blog', function () {
 });
 
 Route::get('hello', [Coba::class, 'helloWorld']);
+
+Route::get('/firstMeet', function () {
+    return view('firstMeet');
+});
+
+Route::get('/page-2', function () {
+    return view('page-2');
+});
+
+Route::get('/linktree', function () {
+    return view('linktree');
+});
+
+Route::get('/javascript-1', function () {
+    return view('js1');
+});
