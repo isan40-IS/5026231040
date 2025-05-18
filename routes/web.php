@@ -46,3 +46,7 @@ Route::get('/linktree', function () {
 Route::get('/javascript-1', function () {
     return view('js1');
 });
+
+Route::get('/summary-of-my-learning', function () {
+    return view('summary-of-my-learning');
+});
