@@ -24,10 +24,13 @@
     {{-- font --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
+    {{-- ICON --}}
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
+    {{-- Alert --}}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     {{-- Javascript --}}
     <script>
         function hello() {
@@ -76,8 +79,8 @@
                 <div class="navbar-nav nav-custom">
                     <a class="nav-link active" aria-current="page" href="#">Article</a>
                     <a class="nav-link" href="#shop">Shop</a>
-                    <a class="nav-link" href="#">linktree</a>
-                    <a class="nav-link" href="#">Form</a>
+                    <a class="nav-link" href="#linktree">linktree</a>
+                    <a class="nav-link" href="#form">Form</a>
                 </div>
             </div>
             <form class="d-flex" role="search">
