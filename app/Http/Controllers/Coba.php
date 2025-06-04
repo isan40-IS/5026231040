@@ -18,4 +18,8 @@ class Coba extends Controller
         $pelajaran = ["Algoritma & Pemrograman", "Kalklus", "Pemrograman Web"];
         return view('biodata', ['nama' => $nama, 'usia' => $umur, 'alamat' =>$alamat, 'matkul'=> $pelajaran]);
     }
+
+    public function view_template(){
+        return view('template_bs');
+    }
 }

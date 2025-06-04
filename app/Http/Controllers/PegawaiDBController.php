@@ -10,7 +10,9 @@ class PegawaiDBController extends Controller
     public function index()
     {
     	// mengambil data dari table pegawai
-    	$pegawai = DB::table('pegawai')->get();
+    	//$pegawai = DB::table('pegawai')->get(); //return all record
+        $pegawai = DB::table('pegawai')->paginate(10); //defaultnya 15
+        // get dan paginate tidak bisa dikerjakan bersamaan
 
     	// mengirim data pegawai ke view index
     	return view('index',['pegawai' => $pegawai]);
@@ -38,10 +40,12 @@ public function store(Request $request)
 }
 
 // method untuk edit data pegawai
-public function edit($id)
+public function edit($id) //tidak pakai $request karena ada primary key
 {
 	// mengambil data pegawai berdasarkan id yang dipilih
-	$pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
+	$pegawai = DB::table('pegawai')
+    ->where('pegawai_id',$id)
+    ->get();
 	// passing data pegawai yang didapat ke view edit.blade.php
 	return view('edit',['pegawai' => $pegawai]);
 
@@ -70,5 +74,19 @@ public function hapus($id)
 	// alihkan halaman ke halaman pegawai
 	return redirect('/pegawai');
 }
-}
 
+public function cari(Request $request) //kalau pakai request, harus tangkap datanya
+	{
+		// menangkap data pencarian
+		$cari = $request->cari; //"cari" sesuai dengan nama form input di cari pegawai
+
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$pegawai = DB::table('pegawai')
+		->where('pegawai_nama','like',"%".$cari."%") //dimana di tabel pegawai_nama ada unsur .$cari. nya baik di depan belakang ataupun tengah
+		->paginate();
+
+    		// mengirim data pegawai ke view index
+		return view('index',['pegawai' => $pegawai]);
+
+	}
+}
