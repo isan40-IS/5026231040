@@ -5,6 +5,7 @@ use App\Http\Controllers\Coba;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\TasDBController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -80,3 +81,12 @@ Route::post('/pegawai/update',[PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
 
 Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
+
+//route tasDB
+Route::get('/tas', [TasDBController::class, 'index']);
+Route::get('/tas/tambah', [TasDBController::class, 'add']);
+Route::post('/tas/store', [TasDBController::class, 'store']); //jika form dikirim, route ini akan dijalankan
+Route::get('/tas/edit/{id}',[TasDBController::class, 'edit']);
+Route::post('/tas/update',[TasDBController::class, 'update']);
+Route::get('/tas/hapus/{id}', [TasDBController::class, 'hapus']);
+Route::get('/tas/cari', [TasDBController::class, 'cari']);
