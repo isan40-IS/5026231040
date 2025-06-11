@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\TasDBController;
+use App\Http\Controllers\KaryawanDBController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -90,3 +91,10 @@ Route::get('/tas/edit/{id}',[TasDBController::class, 'edit']);
 Route::post('/tas/update',[TasDBController::class, 'update']);
 Route::get('/tas/hapus/{id}', [TasDBController::class, 'hapus']);
 Route::get('/tas/cari', [TasDBController::class, 'cari']);
+
+//route tasDB
+Route::get('/karyawan', [KaryawanDBController::class, 'index']);
+Route::get('/karyawan/tambah', [KaryawanDBController::class, 'add']);
+Route::post('/karyawan/store', [KaryawanDBController::class, 'store']); //jika form dikirim, route ini akan dijalankan
+Route::get('/karyawan/hapus/{id}', [KaryawanDBController::class, 'hapus']);
+Route::get('/karyawan/cari', [KaryawanDBController::class, 'cari']);
