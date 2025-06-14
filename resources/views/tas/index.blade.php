@@ -1,10 +1,9 @@
-@extends('template_bs');
+@extends('template_bs')
 @section('content')
     <h3>Data Tas</h3>
 
-    <a href="/tas/tambah" class="btn btn-primary"> + Tambah Tas Baru</a>
+    <a href="/tas/tambah" class="btn btn-primary mb-5"> + Tambah Tas Baru</a>
 
-    <br />
     <p>Cari Data Tas :</p>
     {{-- tidak perlu csrf karena pakai get --}}
     <form action="/tas/cari" method="GET">

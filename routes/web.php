@@ -7,6 +7,8 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\TasDBController;
 use App\Http\Controllers\KaryawanDBController;
+use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\TrafficController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -98,3 +100,13 @@ Route::get('/karyawan/tambah', [KaryawanDBController::class, 'add']);
 Route::post('/karyawan/store', [KaryawanDBController::class, 'store']); //jika form dikirim, route ini akan dijalankan
 Route::get('/karyawan/hapus/{id}', [KaryawanDBController::class, 'hapus']);
 Route::get('/karyawan/cari', [KaryawanDBController::class, 'cari']);
+
+//route keranjangbelanja
+Route::get('/keranjangbelanja', [KeranjangBelanjaController::class, 'indexkeranjangbelanja']);
+Route::get('/keranjangbelanja/belikeranjangbelanja/{id}', [KeranjangBelanjaController::class, 'belikeranjangbelanja']);
+Route::get('/keranjangbelanja/batalkeranjangbelanja/{id}', [KeranjangBelanjaController::class, 'batalkeranjangbelanja']);
+Route::post('/keranjangbelanja/storekeranjangbelanja', [KeranjangBelanjaController::class, 'storekeranjangbelanja']);
+Route::post('/keranjangbelanja/updatekeranjangbelanja', [KeranjangBelanjaController::class, 'updatekeranjangbelanja']);
+
+//route traffic / pagecounter
+Route::get('/pagecounter', [TrafficController::class, 'index']);

@@ -20,14 +20,14 @@
 </head>
 
 <body>
-    <div class="jumbotron text-center mx-auto">
+    <div class="jumbotron text-center mx-auto mt-0">
         <h1>Hizkia Crisantino : 5026231040</h1>
     </div>
 
     <nav class="navbar navbar-expand-sm bg-light">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">All Front End</a>
+                <a class="nav-link" href="frontend">All Front End</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/pegawai">Pegawai</a>
@@ -39,13 +39,13 @@
                 <a class="nav-link" href="#">EAS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 1</a>
+                <a class="nav-link" href="/keranjangbelanja">Latihan 1</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/karyawan">Latihan 2</a>
+                <a class="nav-link" href="/pagecounter">Latihan 2</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 3</a>
+                <a class="nav-link" href="/karyawan">Latihan 3</a>
             </li>
         </ul>
     </nav>

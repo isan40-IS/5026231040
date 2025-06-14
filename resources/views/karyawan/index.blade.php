@@ -1,4 +1,4 @@
-@extends('template_bs');
+@extends('template_bs')
 @section('content')
     <h3>Data Karyawan</h3>
 
