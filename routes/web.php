@@ -9,6 +9,7 @@ use App\Http\Controllers\TasDBController;
 use App\Http\Controllers\KaryawanDBController;
 use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\TrafficController;
+use App\Http\Controllers\NilaiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -110,3 +111,10 @@ Route::post('/keranjangbelanja/updatekeranjangbelanja', [KeranjangBelanjaControl
 
 //route traffic / pagecounter
 Route::get('/pagecounter', [TrafficController::class, 'index']);
+
+//route EAS
+//route tasDB
+Route::get('/EAS', [NilaiController::class, 'index']);
+Route::get('/EAS/tambah', [NilaiController::class, 'add']);
+Route::post('/EAS/store', [NilaiController::class, 'store']); //jika form dikirim, route ini akan dijalankan
+
